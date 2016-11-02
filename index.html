@@ -529,15 +529,7 @@
 			</div>
 			<div id="fiction_chapter_title"></div>
 			<div id="fiction_container" class="m-read-content">
-				<h4>赫然阿喀琉斯的机会</h4>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
-				<p>可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。可是，她一个人，压根抵挡不住她们三个人。她们狠狠扯着她的胳膊将她拉开，然后打开了她的箱子。一个女工乱七八糟的将她的衣服抖开，里面赫然掉出来一个金镯子。</p>
+				
 			</div>
 
 			<div class="m-button-bar">
@@ -623,14 +615,14 @@
 							cache:true,
 							callback:'duokan_fiction_chapter',
 							success:function(result){
-								debugger
 								var data = $.base64.decode(result);
 								var json = decodeURIComponent(escape(data));
-								callback(data);
+								callback(json);
 							}
 						})
 					}
 					return {
+						getJSONP:getJSONP,
 						StorageGetter:StorageGetter,
 						StorageSetter:StorageSetter
 					}
@@ -658,7 +650,11 @@
 				function main(){
 					//todo 整个项目的入口函数
 					var readerModel = ReaderModel();
-					readerModel.init();
+					var readerUI = ReaderBaseFrame(RootContainer);
+
+					readerModel.init(function(data){
+						readerUI(data)
+					});
 					EventHandler();
 				}
 
@@ -666,10 +662,11 @@
 					//todo 实现和阅读器相关的数据交互的方法
 
 					var Chapter_id;
-					var init = function() {
+					var init = function(UIcallback) {
 						getFictionInfo(function(){
-							getCurChapterContent(Chapter_id, function(){
-
+							getCurChapterContent(Chapter_id, function(data){
+								//todo
+								UIcallback && UIcallback(data);
 							});
 						})
 					}
@@ -680,7 +677,7 @@
 							callback && callback();
 						},'json');
 					}
-					var getCurChapterContent = function(chapter_id,data){
+					var getCurChapterContent = function(chapter_id,callback){
 						$.get('data/data' + chapter_id + '.json', function(data){
 							if(data.result == 0) {
 								var url = data.jsonp;
@@ -696,8 +693,20 @@
 					}
 				}
 
-				function ReaderBaseFrame(){
+				function ReaderBaseFrame(container){
 					//todo 渲染基本的UI结构
+					function parseChapterData(jsonData){
+						var jsonObj = JSON.parse(jsonData);
+						var html = '<h4>' + jsonObj.t + '</h4>';
+						for(var i = 0; i<jsonObj.p.length; i++){
+							html += '<p>' + jsonObj.p[i] + '</p>'
+						}
+						return html;
+					}
+
+					return function(data){
+						container.html(parseChapterData(data))
+					}
 				}
 
 				function EventHandler(){
