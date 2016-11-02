@@ -623,6 +623,7 @@
 							cache:true,
 							callback:'duokan_fiction_chapter',
 							success:function(result){
+								debugger
 								var data = $.base64.decode(result);
 								var json = decodeURIComponent(escape(data));
 								callback(data);
