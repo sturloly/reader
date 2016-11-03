@@ -601,7 +601,6 @@
 
 		<script>
 			(function(){
-				'use strict'
 				var Util = (function(){
 					var prefix ='html5_reader_';
 					var StorageGetter = function(key){
@@ -667,18 +666,12 @@
 					var Chapter_id = null;
 					var ChapterTotal;
 					var init = function(UIcallback) {
-						/*getFictionInfo(function(){
+						getFictionInfo(function(){
 							getCurChapterContent(Chapter_id, function(data){
 								//todo
 								UIcallback && UIcallback(data);
 							});
-						})*/
-						getFictionInfoPromise.then(function(d){
-							getCurChapterContent(Chapter_id, function(data){
-								//todo
-								UIcallback && UIcallback(data);
-							});
-						});
+						})
 					}
 					var getFictionInfo = function(callback){
 						$.get('data/chapter.json',function(data){
@@ -694,27 +687,6 @@
 							callback && callback();
 						},'json');
 					}
-
-					var getFictionInfoPromise = new Promise(function(resolve,reject){
-						$.get('data/chapter.json',function(data){
-							//todo 获得章节信息之后的回掉
-							if(dat.result ==0){
-								Chapter_id = Util.StorageGetter('last_chapter_id');
-								Chapter_id = Number(Chapter_id);
-								if(Chapter_id == null) {
-									Chapter_id = data.chapters[1].chapter_id;
-								} else if(Chapter_id > 4) {
-									Chapter_id = data.chapters[1].chapter_id;
-								}
-								ChapterTotal = data.chapters.length;
-								rerelve();
-							} else {
-								reject();
-							}
-							
-						},'json');
-					});
-
 					var getCurChapterContent = function(chapter_id,callback){
 						$.get('data/data' + chapter_id + '.json', function(data){
 							if(data.result == 0) {
